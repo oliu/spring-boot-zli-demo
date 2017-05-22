@@ -81,6 +81,7 @@
 			</activation>
 			<modules>
 				<module>weaver-web</module>
+				<module>weaver-common</module>
 			</modules>
 		</profile>
 	</profiles>
