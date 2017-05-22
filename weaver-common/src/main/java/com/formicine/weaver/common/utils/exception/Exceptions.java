@@ -1,4 +1,4 @@
-package com.formicine.weaver.utils.exception;
+package com.formicine.weaver.common.utils.exception;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

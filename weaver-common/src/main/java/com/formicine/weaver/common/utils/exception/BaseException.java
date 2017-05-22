@@ -1,7 +1,7 @@
-package com.formicine.weaver.utils.exception;
+package com.formicine.weaver.common.utils.exception;
 
 
-import com.formicine.weaver.utils.resultHandler.ResultEnum;
+import com.formicine.weaver.common.utils.resultHandler.ResultEnum;
 
 /**
  * 基本异常, 继承自RuntimeException.

@@ -1,4 +1,4 @@
-package com.formicine.weaver.utils.resultHandler;
+package com.formicine.weaver.common.utils.resultHandler;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

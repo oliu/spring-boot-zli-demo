@@ -1,4 +1,4 @@
-package com.formicine.weaver.utils.resultHandler;
+package com.formicine.weaver.common.utils.resultHandler;
 
 /**
  * Created by zli on 2016/11/23.

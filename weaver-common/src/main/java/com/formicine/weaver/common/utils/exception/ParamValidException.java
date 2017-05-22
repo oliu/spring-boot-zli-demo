@@ -1,4 +1,4 @@
-package com.formicine.weaver.utils.exception;
+package com.formicine.weaver.common.utils.exception;
 
 import org.springframework.validation.ObjectError;
 

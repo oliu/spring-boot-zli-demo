@@ -1,4 +1,4 @@
-package com.formicine.weaver.controller;
+package com.formicine.weaver.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

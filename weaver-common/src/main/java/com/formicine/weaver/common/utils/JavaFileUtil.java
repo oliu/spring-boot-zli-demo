@@ -1,4 +1,4 @@
-package com.formicine.weaver.utils;
+package com.formicine.weaver.common.utils;
 
 /**
  * Created by zli on 2016/10/11.
