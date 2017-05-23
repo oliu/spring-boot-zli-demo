@@ -1,0 +1,15 @@
+mybatis:
+      type-aliases-package: com.formicine.weaver.domain.model
+      mapper-locations: classpath:mapper/*.xml
+
+mapper:
+      mappers:
+          - com.formicine.weaver.dao.base.MyMapper
+      not-empty: false
+      identity: MYSQL
+
+pagehelper:
+      helperDialect: mysql
+      reasonable: true
+      supportMethodsArguments: true
+      params: count=countSql

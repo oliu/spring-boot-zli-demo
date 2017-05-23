@@ -14,8 +14,16 @@
         <groupId>com.formicine.weaver</groupId>
         <artifactId>spring-boot-zli-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <!--<relativePath/>--> <!-- lookup parent from repository -->
     </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.formicine.weaver</groupId>
+            <artifactId>weaver-dao</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

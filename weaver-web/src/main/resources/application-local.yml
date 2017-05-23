@@ -1,2 +1,8 @@
 server:
   port: 8999
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/zli?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    data-username: root
+    data-password:
+    driver-class-name: com.mysql.jdbc.Driver
