@@ -2,13 +2,23 @@ package com.formicine.weaver.domain.model;
 
 import lombok.Data;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * 广告表
  */
 @Data
-public class BsAdvert {
+public class BsAdvert implements Serializable{
+
+    private static final long serialVersionUID = 7834189916342751375L;
+    @Id
+    @Column(name = "Id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer status;
     private Integer version;

@@ -8,4 +8,6 @@ import com.formicine.weaver.domain.model.BsAdvert;
  */
 public interface BsAdvertService {
     BsAdvert selectById(Long id);
+
+    BsAdvert selectByPrimaryKey(Long id);
 }

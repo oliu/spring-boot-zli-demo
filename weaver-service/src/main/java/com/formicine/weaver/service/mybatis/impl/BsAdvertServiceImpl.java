@@ -19,6 +19,13 @@ public class BsAdvertServiceImpl implements BsAdvertService {
 
     @Override
     public BsAdvert selectById(Long id) {
-        return bsAdvertMapper.selectByPrimaryKey(id);
+        return bsAdvertMapper.selectById(id);
     }
+
+    @Override
+    public BsAdvert selectByPrimaryKey(Long id) {
+        return (BsAdvert) bsAdvertMapper.selectByPrimaryKey(id);
+    }
+
+
 }

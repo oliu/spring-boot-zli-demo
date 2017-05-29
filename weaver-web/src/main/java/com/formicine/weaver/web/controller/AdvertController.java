@@ -6,7 +6,6 @@ import com.formicine.weaver.common.utils.resultHandler.Result;
 import com.formicine.weaver.common.utils.resultHandler.ResultEnum;
 import com.formicine.weaver.domain.model.BsAdvert;
 import com.formicine.weaver.service.mybatis.BsAdvertService;
-import org.apache.logging.log4j.core.impl.ReusableLogEventFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,15 +25,31 @@ public class AdvertController {
     private BsAdvertService bsAdvertService;
 
     @GetMapping("/one")
-    public Result getAdvert(Long id) {
+    public Result getAdvert(Integer id) {
         if (id != null) {
-            try{
+            try {
+                Long idNew = Long.valueOf(id);
+                BsAdvert bsAdvert = bsAdvertService.selectById(idNew);
+                logger.info("{} result is {}", JavaFileUtil.getMethodName(), bsAdvert);
+                return Result.success(bsAdvert);
+            } catch (Exception e) {
+                logger.error("{} error {}", JavaFileUtil.getMethodName(), Exceptions.getStackTraceAsString(e));
+                return Result.error(ResultEnum.EXCEPTION);
+            }
+        }
+        return Result.error(ResultEnum.PARAMS_LACK);
+    }
 
-                BsAdvert bsAdvert = bsAdvertService.selectById(id);
-                logger.info("{} result is {}", JavaFileUtil.getMethodName(),bsAdvert);
-                return Result.success("OK");
-            }catch (Exception e){
-                logger.error("{} error {}",JavaFileUtil.getMethodName(), Exceptions.getStackTraceAsString(e));
+    @GetMapping("/two")
+    public Result getAdvertByPrimaryKey(Integer id) {
+        if (id != null) {
+            try {
+                Long idNew = Long.valueOf(id);
+                BsAdvert bsAdvert = bsAdvertService.selectByPrimaryKey(idNew);
+                logger.info("{} result is {}", JavaFileUtil.getMethodName(), bsAdvert);
+                return Result.success(bsAdvert);
+            } catch (Exception e) {
+                logger.error("{} error {}", JavaFileUtil.getMethodName(), Exceptions.getStackTraceAsString(e));
                 return Result.error(ResultEnum.EXCEPTION);
             }
         }
